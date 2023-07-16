@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-gray-200 min-h-screen">
+    <div class="bg-gradient-to-r from-indigo-500 text-white text-center font-bold text-4xl">Weather Dashboard</div>
+    <div class="flex sm:flex-row flex-col mt-5">
+        <div class="basis-1/4 bg-white rounded-md mr-5">
+            <h1 class="ml-4 font-semibold text-3xl">Search For City:</h1>
+            <div class="flex flex-col justify-center m-3">
+                <input id="search-city" class="rounded-lg p-2 border-t border-b border-l text-gray-800 border-gray-200 bg-white" type="text" placeholder="Search For Place...">
+                <button id="search-button" class="mt-4 px-4 rounded-lg bg-blue-500 text-white font-semibold py-2 hover:shadow-lg ">
+                    Search
+                  </button>
+            </div>
+            <ul class="list-group text-center"></ul>
+
+        </div>
+        
+        <div id="current-weather" class="basis-3/4 bg-white rounded-md">
+            <h3 class="ml-4 mt-2 text-3xl font-semibold" id="current-city"></h3>
+            <p class="ml-4">Temperature:<span class="current ml-2" id="temperature"></span></p>
+            <p class="ml-4">Humidity:<span class="current ml-2" id="humidity"></span></p> 
+            <p class="ml-4">Wind Speed:<span class="current ml-2" id="wind-speed"></span></p>
+        </div>
+    </div>
+    
+    <div id="forecast" class="flex flex-row-reverse mt-5 ml-5">
+        <div class="basis-3/4 bg-white rounded-md">
+            <h2 class="font-bold text-3xl" >5 Day Forecast</h2>
+
+            <div class="flex sm:flex-row flex-col justify-center text-white font-semibold">
+                <div class="bg-sky-600 basis-1/5 mx-2 mb-3 p-2 mt-2 rounded-lg">
+                    <p id="cDate0"></p>
+                    <p id="cImg0"></p>
+                    <p>Temp:<span id="cTemp0"></span></p>
+                    <p>Humidity:<span id="cHumidity0"></span></p>
+                </div>
+
+                <div class="bg-sky-600 basis-1/5 mx-2 mb-3 p-2 mt-2 rounded-lg ">
+                    <p id="cDate1"></p>
+                    <p id="cImg1"></p>
+                    <p>Temp:<span id="cTemp1"></span></p>
+                    <p>Humidity:<span id="cHumidity1"></span></p>
+                </div>
+
+                <div class="bg-sky-600 basis-1/5 mx-2 mb-3 p-2 mt-2 rounded-lg">
+                    <p id="cDate2"></p>
+                    <p id="cImg2"></p>
+                    <p>Temp:<span id="cTemp2"></span></p>
+                    <p>Humidity:<span id="cHumidity2"></span></p>
+                </div>
+
+                <div class="bg-sky-600 basis-1/5 mx-2 mb-3 p-2 mt-2 rounded-lg">
+                    <p id="cDate3"></p>
+                    <p id="cImg3"></p>
+                    <p>Temp:<span id="cTemp3"></span></p>
+                    <p>Humidity:<span id="cHumidity3"></span></p>
+                </div>
+
+                <div class="bg-sky-600 basis-1/5 mx-2 mb-3 p-2 mt-2 mr-2 rounded-lg">
+                    <p id="cDate4"></p>
+                    <p id="cImg4"></p>
+                    <p>Temp:<span id="cTemp4"></span></p>
+                    <p>Humidity:<span id="cHumidity4"></span></p>
+                </div>
+
+            
+            </div>
+            
+        </div>
+    </div>
+        
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
